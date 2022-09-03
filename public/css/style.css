@@ -27,15 +27,23 @@ body {
 -------------------------------------------------- */
 #header {
   border-bottom: solid 1px #555;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   padding-bottom: 4px;
+}
+
+/* Menu Button
+-------------------------------------------------- */
+#blog-menu {
+  margin-bottom: 28px;
+}
+#blog-menu .btn {
+  padding: 5px;
+  box-shadow: 1px 1px 5px rgba(85, 85, 85, 0.3);
+  border: solid 1px #555;
 }
 
 /* Article
 -------------------------------------------------- */
-#main h2 {
-  margin-bottom: 16px;
-}
 #main .article a {
   display: block;
   margin-bottom: 16px;

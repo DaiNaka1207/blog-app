@@ -5,15 +5,17 @@
 @endsection
 
 @section('header')
-    <h1>{{str_replace('-', ' ', config('app.name'))}}</h1>
+    <h1>記事一覧</h1>
 @endsection
 
 @section('content')
-    <h2>記事一覧</h2>
+    <ul id="blog-menu">
+        <li><a href="{{route('article.create')}}" class="btn">新規投稿</a></li>
+    </ul>
 
     @foreach ($articles as $article)
         <article class="article">
-            <a href="#">
+            <a href="{{route('article.show', ['article' => $article->id])}}">
                 <h3>{{$article->title}}</h3>
                 <p>{{$article->content}}</p>
             </a>
