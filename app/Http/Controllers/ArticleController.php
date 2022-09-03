@@ -17,7 +17,7 @@ class ArticleController extends Controller
         // データベースから記事情報を取得して変数に代入
         $articles = Article::all();
 
-        // ビューを表示
+        // 記事一覧画面を表示
         return view('dashboard', compact('articles'));
     }
 
@@ -28,7 +28,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        // 記事投稿画面を表示
+        return view('create');
     }
 
     /**
@@ -39,7 +40,15 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // フォームに入力された内容を変数に取得
+        $form = $request->all();
+
+        // フォームに入力された内容をデータベースへ登録
+        $article = new Article();
+        $article->fill($form)->save();
+
+        // 記事一覧画面を表示
+        return redirect()->route('article.index');
     }
 
     /**

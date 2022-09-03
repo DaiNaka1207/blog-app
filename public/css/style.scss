@@ -67,6 +67,42 @@ body {
     }
 }
 
+/* Entry
+-------------------------------------------------- */
+#main {
+    form {
+        width: 90%;
+        margin: auto;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            
+            input, textarea {
+                width: 100%;
+                resize: vertical;
+            }
+
+            input, textarea, button {
+                border: solid 1px #555;
+                padding: 5px;
+
+                &:focus {
+                    background-color: rgba(#999, 0.2);
+                    outline: solid 2px #999;
+                    border: solid 1px rgba(#000, 0);
+                }
+            }
+
+            div {
+                display: flex;
+                gap: 15px;
+            }
+        }
+    }
+}
+
 /* Footer
 -------------------------------------------------- */
 #footer {
@@ -95,6 +131,20 @@ body {
         .article {
             p {
                 -webkit-line-clamp: 3;
+            }
+        }
+    }
+
+    /* Entry
+    -------------------------------------------------- */
+    #main {
+        form {
+            ul {
+                div {
+                    // display: flex;
+                    justify-content: space-between;
+                    // gap: 15px;
+                }
             }
         }
     }

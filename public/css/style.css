@@ -64,6 +64,35 @@ body {
   -webkit-line-clamp: 2;
 }
 
+/* Entry
+-------------------------------------------------- */
+#main form {
+  width: 90%;
+  margin: auto;
+}
+#main form ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+#main form ul input, #main form ul textarea {
+  width: 100%;
+  resize: vertical;
+}
+#main form ul input, #main form ul textarea, #main form ul button {
+  border: solid 1px #555;
+  padding: 5px;
+}
+#main form ul input:focus, #main form ul textarea:focus, #main form ul button:focus {
+  background-color: rgba(153, 153, 153, 0.2);
+  outline: solid 2px #999;
+  border: solid 1px rgba(0, 0, 0, 0);
+}
+#main form ul div {
+  display: flex;
+  gap: 15px;
+}
+
 /* Footer
 -------------------------------------------------- */
 #footer {
@@ -87,6 +116,11 @@ body {
   -------------------------------------------------- */
   #main .article p {
     -webkit-line-clamp: 3;
+  }
+  /* Entry
+  -------------------------------------------------- */
+  #main form ul div {
+    justify-content: space-between;
   }
   /* Footer
   -------------------------------------------------- */
