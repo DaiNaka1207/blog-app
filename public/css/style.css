@@ -105,8 +105,79 @@ body {
 
 /* Show
 -------------------------------------------------- */
-#main #show p {
-  white-space: pre-line;
+#show {
+  line-height: 1.6rem;
+  /* Title
+  -------------------------------------------------- */
+  /* List
+  -------------------------------------------------- */
+  /* BlockQuote
+  -------------------------------------------------- */
+  /* Code
+  -------------------------------------------------- */
+  /* Table
+  -------------------------------------------------- */
+}
+#show h1 {
+  font-size: 1.5rem;
+  text-transform: normal;
+}
+#show h2 {
+  font-size: 1.25rem;
+}
+#show h3 {
+  font-size: 1.1rem;
+}
+#show h4 {
+  font-size: 1rem;
+}
+#show h5 {
+  font-size: 0.9rem;
+}
+#show h6 {
+  font-size: 0.8rem;
+}
+#show ul {
+  list-style: initial;
+}
+#show ol {
+  list-style: decimal;
+}
+#show li {
+  margin-left: 20px;
+}
+#show li li {
+  list-style: circle;
+}
+#show li li li {
+  list-style: square;
+}
+#show blockquote {
+  padding-left: 20px;
+  border-left: solid 3px rgba(85, 85, 85, 0.3);
+}
+#show code {
+  font-family: "Klee One";
+  background-color: #ddd;
+  padding: 2px 3px;
+  border-radius: 5px;
+}
+#show pre > code {
+  display: block;
+}
+#show table {
+  border: solid 1px #555;
+}
+#show table th {
+  border: solid 1px #555;
+  background-color: #ccc;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 2px;
+}
+#show table td {
+  padding: 2px;
+  border: solid 1px #555;
 }
 
 /* Footer

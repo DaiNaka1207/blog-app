@@ -114,10 +114,70 @@ body {
 
 /* Show
 -------------------------------------------------- */
-#main {
-    #show {
-        p {
-            white-space: pre-line;
+#show {
+    line-height: 1.60rem;
+
+    /* Title
+    -------------------------------------------------- */
+    h1 {font-size: 1.50rem; text-transform: normal;}
+    h2 {font-size: 1.25rem;}
+    h3 {font-size: 1.10rem;}
+    h4 {font-size: 1.00rem;}
+    h5 {font-size: 0.90rem;}
+    h6 {font-size: 0.80rem;}
+    
+    /* List
+    -------------------------------------------------- */
+    ul {list-style: initial;}
+    ol {list-style: decimal;}
+    li {
+        margin-left: 20px;
+        
+        li {
+            list-style: circle;
+            
+            li {
+                list-style: square;
+            }
+        }
+    }
+    
+    /* BlockQuote
+    -------------------------------------------------- */
+    blockquote {
+        padding-left: 20px;
+        border-left: solid 3px rgba(#555, 0.3);
+    }
+    
+    /* Code
+    -------------------------------------------------- */
+    code {
+        font-family: "Klee One";
+        background-color: #ddd;
+        padding: 2px 3px;
+        border-radius: 5px;
+    }
+    
+    pre>code {
+        display: block;
+    }
+    
+    /* Table
+    -------------------------------------------------- */
+    table {
+        border: solid 1px #555;
+
+        th {
+            border: solid 1px #555;
+            background-color: #ccc;
+            font-size: 1.10rem;
+            font-weight: bold;
+            padding: 2px;
+        }
+
+        td {
+            padding: 2px;
+            border: solid 1px #555;
         }
     }
 }
