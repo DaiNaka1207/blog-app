@@ -58,6 +58,10 @@ body {
   border: solid 1px rgba(85, 85, 85, 0.7);
   box-shadow: 1px 1px 5px rgba(85, 85, 85, 0.3);
 }
+#main .article a time {
+  font-size: 0.5rem;
+  font-weight: bold;
+}
 #main .article a h3 {
   font-size: 1.1rem;
   margin-bottom: 4px;

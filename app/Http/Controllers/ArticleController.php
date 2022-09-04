@@ -16,7 +16,7 @@ class ArticleController extends Controller
     public function index()
     {
         // データベースから記事情報を取得して変数に代入
-        $articles = Article::orderby('updated_at', 'desc')->get();
+        $articles = Article::orderby('created_at', 'desc')->get();
 
         // 記事一覧画面を表示
         return view('dashboard', compact('articles'));
