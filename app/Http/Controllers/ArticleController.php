@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ArticleController extends Controller
 {
@@ -15,7 +16,7 @@ class ArticleController extends Controller
     public function index()
     {
         // データベースから記事情報を取得して変数に代入
-        $articles = Article::all();
+        $articles = Article::orderby('updated_at', 'desc')->get();
 
         // 記事一覧画面を表示
         return view('dashboard', compact('articles'));
@@ -59,7 +60,8 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        // 記事閲覧画面を表示
+        return view('show', compact('article'));
     }
 
     /**
@@ -70,7 +72,8 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        // 記事編集画面を表示
+        return view('edit', compact('article'));
     }
 
     /**
@@ -82,7 +85,14 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        // フォームに入力された内容を変数に取得
+        $form = $request->all();
+
+        // フォームに入力された内容をデータベースへ登録
+        $article->fill($form)->save();
+
+        // 記事閲覧画面を表示
+        return redirect(route('article.show', ['article' => $article->id]));
     }
 
     /**
@@ -93,6 +103,10 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        // データベースから削除
+        $article->delete();
+
+        // 記事一覧画面を表示
+        return redirect(route('article.index'));
     }
 }

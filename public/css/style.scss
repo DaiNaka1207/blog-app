@@ -30,9 +30,13 @@ body {
 /* Menu Button
 -------------------------------------------------- */
 #blog-menu {
+    display: flex;
+    gap: 30px;
     margin-bottom: 28px;
 
     .btn {
+        display: block;
+        width: max-content;
         padding: 5px;
         box-shadow: 1px 1px 5px rgba(#555, 0.3);
         border: solid 1px #555;
@@ -99,6 +103,16 @@ body {
                 display: flex;
                 gap: 15px;
             }
+        }
+    }
+}
+
+/* Show
+-------------------------------------------------- */
+#main {
+    #show {
+        p {
+            white-space: pre-line;
         }
     }
 }
