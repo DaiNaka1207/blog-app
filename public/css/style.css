@@ -126,8 +126,6 @@ body {
   .container {
     width: 100%;
   }
-  /* Header
-  -------------------------------------------------- */
   /* Article
   -------------------------------------------------- */
   #main .article p {
@@ -138,7 +136,5 @@ body {
   #main form ul div {
     justify-content: space-between;
   }
-  /* Footer
-  -------------------------------------------------- */
 }
 /*# sourceMappingURL=style.css.map */
