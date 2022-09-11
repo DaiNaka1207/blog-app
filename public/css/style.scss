@@ -128,12 +128,10 @@ body {
     
     /* List
     -------------------------------------------------- */
-    ul {list-style: initial;}
-    ol {list-style: decimal;}
-    li {
-        margin-left: 20px;
+    ul {
+        list-style: initial;
         
-        li {
+        li li {
             list-style: circle;
             
             li {
@@ -141,6 +139,23 @@ body {
             }
         }
     }
+
+    ol {
+        list-style: upper-roman;
+
+        li li {
+            list-style: lower-roman;
+
+            li {
+                list-style: lower-alpha;
+            }
+        }
+    }
+
+    li {
+        margin-left: 20px;
+    }
+    
     
     /* BlockQuote
     -------------------------------------------------- */

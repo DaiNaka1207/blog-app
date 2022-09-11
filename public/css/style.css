@@ -140,17 +140,23 @@ body {
 #show ul {
   list-style: initial;
 }
+#show ul li li {
+  list-style: circle;
+}
+#show ul li li li {
+  list-style: square;
+}
 #show ol {
-  list-style: decimal;
+  list-style: upper-roman;
+}
+#show ol li li {
+  list-style: lower-roman;
+}
+#show ol li li li {
+  list-style: lower-alpha;
 }
 #show li {
   margin-left: 20px;
-}
-#show li li {
-  list-style: circle;
-}
-#show li li li {
-  list-style: square;
 }
 #show blockquote {
   padding-left: 20px;
